@@ -9,7 +9,11 @@
 }
 
 #carta-texto{
-    display: block;
-    margin: auto;
+    width: 60%;
+    margin: 10px 5px 30px 10%;
     align-items: center;
+}
+
+#carta-gerada{
+    text-align: center;
 }
