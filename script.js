@@ -23,6 +23,8 @@ function gerarCarta(){
     }
       if (numCaracteres.length === count || textInput.value === '') {
           cartaGerada.innerText = "Por favor, digite o conteúdo da carta.";
+      }else {
+          cartaGerada.innerText = textInput.value;
       }
   console.log(numCaracteres.length);
 }
