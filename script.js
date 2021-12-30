@@ -1,3 +1,13 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable prefer-destructuring */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable spaced-comment */
+/* eslint-disable max-lines-per-function */
+/* eslint-disable brace-style */
+/* eslint-disable operator-linebreak */
+/* eslint-disable padded-blocks */
+/* eslint-disable complexity */
+/* eslint-disable no-empty */
 /* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable no-undef */
 /* eslint-disable no-use-before-define */
@@ -8,23 +18,45 @@
 /* eslint-disable prefer-const */
 let textInput = document.querySelector('#carta-texto');
 let btnCarta = document.querySelector('#criar-carta');
-let cartaGerada = document.querySelector('#carta-gerada');
+let paiCartaGerada = document.querySelector('#carta-gerada');
 
+let classe = {
+  estilo: ['newspaper', 'magazine1', 'magazine2'],
+  tamanho: ['medium', 'big', 'reallybig'],
+  rotacao: ['rotateleft', 'rotateright'],
+  inclinacao: ['skewleft', 'skewright'],
+};
 
 btnCarta.addEventListener('click', gerarCarta);
 
 function gerarCarta(){
-    let numCaracteres = textInput.value;
-    let count = 0;
-    for (let i = 0; i < numCaracteres.length; i += 1) {
-      if (numCaracteres[i] === ' ') {
-          count += 1;
-      }
+  paiCartaGerada.innerHTML = '';
+  let novaCarta = textInput.value.split(' ');
+  let totalCaracteres = textInput.value;
+  let count = 0;
+  for (let i = 0; i < totalCaracteres.length; i += 1) {
+    if (totalCaracteres[i] === ' ') {
+        count += 1;
     }
-      if (numCaracteres.length === count || textInput.value === '') {
-          cartaGerada.innerText = "Por favor, digite o conteúdo da carta.";
-      }else {
-          cartaGerada.innerText = textInput.value;
-      }
-  console.log(numCaracteres.length);
+  }
+  if (totalCaracteres.length === count || textInput.value === '') {
+      paiCartaGerada.innerText = "Por favor, digite o conteúdo da carta.";
+  } 
+  else {
+    for (let index = 0; index < novaCarta.length; index += 1) {
+      let sort1 = Math.floor(Math.random() * 3);
+      let sort2 = Math.floor(Math.random() * 3);
+      let sort3 = Math.floor(Math.random() * 3);
+      let sort4 = Math.floor(Math.random() * 3);
+
+      let filhoNovaCarta = document.createElement('span');
+      filhoNovaCarta.innerText = novaCarta[index];
+      filhoNovaCarta.classList.add(classe.estilo[sort1]);
+      filhoNovaCarta.classList.add(classe.rotacao[sort2]);
+      filhoNovaCarta.classList.add(classe.tamanho[sort3]);
+      filhoNovaCarta.classList.add(classe.inclinacao[sort4]);
+      paiCartaGerada.appendChild(filhoNovaCarta);
+    }
+  }
 }
+
