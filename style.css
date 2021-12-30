@@ -22,6 +22,10 @@
     text-overflow: ellipsis;
 }
 
+span{
+    display: inline-block;   
+}
+
 .newspaper{
     background-color: rgb(250, 235, 215);
     font-family: 'Times New Roman', Times, serif;
@@ -71,5 +75,5 @@
 }
 
 .skewright{
-    transform: matrix(1, 0, -0.176327, 1, 0, 0);
+    transform: matrix(1, 0, -0.176327,1 , 0, 0);
 }
