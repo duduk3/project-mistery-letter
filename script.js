@@ -1,3 +1,6 @@
+/* eslint-disable max-len */
+/* eslint-disable prefer-template */
+/* eslint-disable no-param-reassign */
 /* eslint-disable arrow-parens */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable prefer-destructuring */
@@ -59,6 +62,11 @@ function gerarCarta(){
       filhoNovaCarta.classList.remove('undefined');
       paiCartaGerada.appendChild(filhoNovaCarta);
     }
+    if (novaCarta.length === 1 ) {
+      document.querySelector('#carta-contador').innerText = 'Essa carta tem ' + novaCarta.length + ' palavra.';
+    } else {
+      document.querySelector('#carta-contador').innerText = 'Essa carta tem ' + novaCarta.length + ' palavras.';
+    }
     changeStyle();
   }
 }
@@ -76,7 +84,6 @@ function changeStyle(){
       event.target.classList.add(classe.tamanho[sort3]);
       event.target.classList.add(classe.inclinacao[sort4]);
       event.target.classList.remove('undefined');
-      console.log(event.target.className);
     });
   });
 }  

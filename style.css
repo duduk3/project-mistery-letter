@@ -22,6 +22,12 @@
     text-overflow: ellipsis;
 }
 
+#carta-contador{
+    font-size: x-large;
+    text-align: center;
+    margin: 30px auto;
+}
+
 span{
     display: inline-block;   
 }
