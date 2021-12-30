@@ -1,3 +1,4 @@
+/* eslint-disable arrow-parens */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-unused-expressions */
@@ -55,8 +56,27 @@ function gerarCarta(){
       filhoNovaCarta.classList.add(classe.rotacao[sort2]);
       filhoNovaCarta.classList.add(classe.tamanho[sort3]);
       filhoNovaCarta.classList.add(classe.inclinacao[sort4]);
+      filhoNovaCarta.classList.remove('undefined');
       paiCartaGerada.appendChild(filhoNovaCarta);
     }
+    changeStyle();
   }
 }
 
+function changeStyle(){
+  document.querySelectorAll('span').forEach(item => {
+    item.addEventListener('click', event => {
+      let sort1 = Math.floor(Math.random() * 3);
+      let sort2 = Math.floor(Math.random() * 3);
+      let sort3 = Math.floor(Math.random() * 3);
+      let sort4 = Math.floor(Math.random() * 3);
+      event.target.className = '';
+      event.target.classList.add(classe.estilo[sort1]);
+      event.target.classList.add(classe.rotacao[sort2]);
+      event.target.classList.add(classe.tamanho[sort3]);
+      event.target.classList.add(classe.inclinacao[sort4]);
+      event.target.classList.remove('undefined');
+      console.log(event.target.className);
+    });
+  });
+}  
