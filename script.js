@@ -62,11 +62,7 @@ function gerarCarta(){
       filhoNovaCarta.classList.remove('undefined');
       paiCartaGerada.appendChild(filhoNovaCarta);
     }
-    if (novaCarta.length === 1 ) {
-      document.querySelector('#carta-contador').innerText = 'Essa carta tem ' + novaCarta.length + ' palavra.';
-    } else {
-      document.querySelector('#carta-contador').innerText = 'Essa carta tem ' + novaCarta.length + ' palavras.';
-    }
+      document.querySelector('#carta-contador').innerText = novaCarta.length;
     changeStyle();
   }
 }
