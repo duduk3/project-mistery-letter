@@ -1,4 +1,4 @@
-# Um projeto bônus no curso, com mais integrações e dinamismo com o usuário  - Legal né?!!! :art:
+# Um projeto bônus no curso, com mais integrações e dinamismo com o usuário  - Legal né?!!! 📜
 
 ## Reforçamos nosso conhecimento em manipulação de elementos através do javascript.
 
@@ -30,4 +30,4 @@
 
 
 
-### Bem bacana! Ver o código Javascript rodando e proporcionando uma página que responde ao comando do usuário.🤓 😎 🤩
+### Bem bacana! Ver o código Javascript rodando e proporcionando uma página que responde ao comando do usuário.🤓 😎 🤩📜
